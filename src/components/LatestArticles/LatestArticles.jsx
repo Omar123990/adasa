@@ -59,7 +59,7 @@ const LatestArticles = () => {
 
         <div className="row g-4">
           {articles.map((article) => {
-            const articleSlug = article.title.replaceAll(' ', '-');
+            const articleSlug = article.title.replace('/\s+/g', '-');
 
             return (
               <div key={article.id} className="col-lg-4 col-md-6">
